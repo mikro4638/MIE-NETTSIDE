@@ -6,7 +6,8 @@ interface Props {
     title: string; // Hvis du vil bruke en tittel
 }
 
-const { title } = Astro.props;
+// Ekstraherer title fra props
+const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
