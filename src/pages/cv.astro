@@ -1,14 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro'; // Importer Layout-komponenten
-
-interface Props {
-    title: string; // Definer Props for å unngå TypeScript-feil
-}
-
-const { title } = Astro.props; // Hent title fra Astro.props
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title={title}>  <!-- Send title som prop til Layout -->
+<Layout>
     <div class="cv-container">
         <h1 class="cv-title">Min CV</h1>
         <p class="cv-description">

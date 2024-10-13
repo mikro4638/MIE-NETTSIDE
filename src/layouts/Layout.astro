@@ -1,13 +1,6 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-interface Props {
-    title: string; // Hvis du vil bruke en tittel
-}
-
-// Ekstraherer title fra props
-const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -15,12 +8,12 @@ const { title } = Astro.props as Props;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
+    <title>Min Hjemmeside</title>
 </head>
 <body>
     <Header />
     <main style="min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background-color: #ffefef;">
-        <slot />
+        <slot /> <!-- Dette lar innholdet i index.astro og andre sider bli injisert her -->
     </main>
     <Footer style="margin-top: 50px;" />
 </body>
