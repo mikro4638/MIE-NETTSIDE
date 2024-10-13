@@ -1,93 +1,115 @@
 ---
-title: "My Projects"
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../components/Layout.astro";
 ---
+<Layout title="Projects">
+  <section class="projects-section">
+    <h1>My Projects</h1>
+    <div class="projects-container">
 
-<!DOCTYPE html>
-<html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-</head>
-<body>
-    <Header />
-    <main style="min-height: 80vh; padding: 20px; text-align: center; background: #ffefef;">
-        <h1 style="font-size: 3rem; color: #d81b60; margin-bottom: 30px; font-family: 'Montserrat', sans-serif; letter-spacing: 1.5px;">My Projects</h1>
-        <p style="max-width: 600px; margin: auto; font-size: 1.3rem; line-height: 1.6; color: #6a1b9a; font-family: 'Roboto', sans-serif;">
-            Here are some of my projects that I have developed. <span style="color: #d81b60; font-weight: bold;">Click on the titles</span> to view them on GitHub!
-        </p>
-        
-        <div style="display: flex; flex-direction: column; align-items: center; margin-top: 40px;">
-            <!-- Project 1 -->
-            <div style="margin: 20px; padding: 20px; background-color: #ffffff; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
-                <h2 style="color: #d81b60; font-size: 2rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">Snake Game</h2>
-                <img src="/images/snake.jpg" alt="Snake Game Screenshot" style="width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);" />
-                <p style="color: #7b1fa2; margin: 10px 0; font-family: 'Roboto', sans-serif;">A classic Snake game built with JavaScript.</p>
-                <a href="https://github.com/mikro4638/Mie.Kronkvist_Snake_Game" target="_blank" style="text-decoration: none;">
-                    <button style="background-color: #d81b60; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s, transform 0.3s;">
-                        View on GitHub
-                    </button>
-                </a>
-            </div>
+      <div class="project-card">
+        <a href="/projects/2048" class="project-link">
+          <h2>2048 Game</h2>
+          <p>Objektorientert programmering (INF101)</p>
+          <p>April 2024</p>
+        </a>
+      </div>
 
-            <!-- Project 2 -->
-            <div style="margin: 20px; padding: 20px; background-color: #ffffff; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
-                <h2 style="color: #d81b60; font-size: 2rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">Tetris Game</h2>
-                <img src="/images/Tetris.jpg" alt="Tetris Game Screenshot" style="width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);" />
-                <p style="color: #7b1fa2; margin: 10px 0; font-family: 'Roboto', sans-serif;">A fun Tetris game implementation in JavaScript.</p>
-                <a href="https://github.com/mikro4638/Mie.Kronlvist_Tetris_Game" target="_blank" style="text-decoration: none;">
-                    <button style="background-color: #d81b60; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s, transform 0.3s;">
-                        View on GitHub
-                    </button>
-                </a>
-            </div>
+      <div class="project-card">
+        <a href="/projects/tetris" class="project-link">
+          <h2>Tetris</h2>
+          <p>Objektorientert programmering (INF101)</p>
+          <p>March 2024</p>
+        </a>
+      </div>
 
-            <!-- Project 3 -->
-            <div style="margin: 20px; padding: 20px; background-color: #ffffff; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s;">
-                <h2 style="color: #d81b60; font-size: 2rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.5px;">Wordle Game</h2>
-                <img src="/images/Wordle.jpg" alt="Wordle Game Screenshot" style="width: 300px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);" />
-                <p style="color: #7b1fa2; margin: 10px 0; font-family: 'Roboto', sans-serif;">A Wordle-inspired game created with Java.</p>
-                <a href="https://github.com/mikro4638/Mie.Kronkvist_Wordle_Game" target="_blank" style="text-decoration: none;">
-                    <button style="background-color: #d81b60; color: #fff; padding: 10px 20px; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s, transform 0.3s;">
-                        View on GitHub
-                    </button>
-                </a>
-            </div>
-        </div>
-    </main>
-    <Footer style="margin-top: 50px;" />
-</body>
-</html>
+      <div class="project-card">
+        <a href="/projects/snake" class="project-link">
+          <h2>Snake</h2>
+          <p>Innføring programmering (INF100)</p>
+          <p>October 2023</p>
+        </a>
+      </div>
 
-<style is:global>
-    body {
-        background: #ffccbc; /* Update background color */
-        margin: 0; /* Ensure no margin */
-        font-family: 'Poppins', sans-serif; /* Consistent font family */
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .projects-section {
+    padding: 4rem 1rem;
+    background-color: #1e1e24;
+    color: #f1f1f1;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #96F7FF;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .project-card {
+    background-color: #2c2f3a;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #5DD5FF;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+    color: #c4c4c4;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-link {
+    display: block; /* Make the link block-level */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    height: 100%; /* Ensure the link covers the full height */
+  }
+
+  .project-link:hover {
+    color: #96F7FF; /* Change color on hover */
+  }
+
+  @media (max-width: 768px) {
+    .projects-container {
+      flex-direction: column;
+      align-items: center;
     }
 
-    div:hover {
-        transform: scale(1.05);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    .project-card {
+      width: 100%;
+      max-width: 500px;
     }
-
-    button:hover {
-        background-color: #c2185b;
-        transform: translateY(-3px);
-    }
-
-    h1, h2 {
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    p, a {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    a:hover {
-        color: #c2185b;
-        text-decoration: underline;
-    }
+  }
 </style>
