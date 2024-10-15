@@ -1,0 +1,173 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon 2024: Highsoft x Gi Gaven Videre</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #ffefef;
+            margin: 0;
+            padding: 0;
+            color: #6a1b9a;
+            overflow-x: hidden; /* Forhindrer horisontal rulling */
+        }
+
+        main {
+            min-height: 80vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #d81b60;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1.5px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 0.8s forwards 0.2s; /* Animasjon for h1 */
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #d81b60;
+            margin-top: 40px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 0.8s forwards 0.4s; /* Animasjon for h2 */
+        }
+
+        p {
+            max-width: 600px;
+            margin: auto;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 0.8s forwards 0.6s; /* Animasjon for p */
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #d81b60;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 10px; /* Legg til padding for bedre klikkbarhet */
+            border-radius: 5px; /* Rundede kanter */
+            transition: background-color 0.3s; /* Smooth background change */
+        }
+
+        nav a:hover {
+            background-color: rgba(216, 27, 96, 0.2); /* Lysere bakgrunn ved hover */
+            text-decoration: underline;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background: #d81b60;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav a:hover::after {
+            width: 100%; /* Animasjon for hover-effekt på lenker */
+        }
+        
+
+        a {
+            color: #d81b60; /* Farge for alle lenker */
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #ff4081; /* Endrer fargen til lysere rosa ved hover */
+        }
+
+        img {
+    width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.8s forwards 0.8s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Legg til smooth overgang */
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Legg til hover-effekt */
+}
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <Header />
+    <main>
+        <h1>Hackathon 2024: Highsoft x Gi Gaven Videre</h1>
+
+        <nav>
+            <a href="#hackathon">Hva er et Hackathon?</a>
+            <a href="#gi-gaven-videre">Om "Gi Gaven Videre"</a>
+            <a href="#prosjektbeskrivelse">Prosjektbeskrivelse</a>
+            <a href="#vi-vant">Vi vant!</a> <!-- Ny lenke lagt til -->
+        </nav>
+
+        <h2 id="hackathon">
+            <a href="#hackathon" style="color: #d81b60; text-decoration: none;">Hva er et hackathon?</a>
+        </h2>
+        <p>
+            Et hackathon er et arrangement der folk, vanligvis utviklere og designere, samles for å jobbe sammen på prosjekter i løpet av en kort periode, vanligvis 24 til 48 timer. Målet er å lage nye løsninger eller prototyper på et spesifikt tema. Deltakerne jobber i team, og på slutten presenterer de det de har laget. Mange hackathon har også konkurranser med premier for de beste prosjektene.
+        </p>
+        
+        <img src="/figma/Hackathon.jpg" alt="Hackathon Event" />
+
+        <h2 id="gi-gaven-videre">
+            <a href="#gi-gaven-videre" style="color: #d81b60; text-decoration: none;">Om "Gi Gaven Videre"</a>
+        </h2>
+        <p>
+            "Gi Gaven Videre" er et selskap i Bergen som fokuserer på bærekraftig gavegiving. De oppfordrer bedrifter til å bruke deres digitale gavekort i stedet for å kjøpe fysiske gaver til ansatte, spesielt i forbindelse med høytider og anledninger. De tilbyr digitale gavekort som lar mottakerne velge hvilken veldedig sak de ønsker å støtte. På denne måten kan gaven gis videre til en sak som betyr noe for dem. Du kan lese mer om Gi Gaven Videre <a href="https://www.gigavenvidere.no/om-oss">her</a>.
+        </p>
+
+        <h2 id="prosjektbeskrivelse">
+            <a href="#prosjektbeskrivelse" style="color: #d81b60; text-decoration: none;">Prosjektbeskrivelse</a>
+        </h2>
+        <p>
+            Vi i Gruppe 3 har utviklet en interaktiv hjemmeside for å gi både bedrifter og enkeltpersoner bedre innsikt i hvordan deres donasjoner brukes. Målet er å motivere brukerne til å fortsette å støtte veldedige formål ved å vise dem den positive innvirkningen av deres bidrag. 
+            <a href="https://www.figma.com/proto/l6wZZC8z2i85hCVpVCdzXQ/Untitled?node-id=3-1773&starting-point-node-id=1%3A2">Se Figma-prosjektet vårt her</a>.
+        </p>
+
+        <img src="/figma/Gjennomgang.jpg" alt="Prosjektgjennomgang" />
+        
+        <h2 id="vi-vant">Vi vant!</h2> <!-- Lagt til id for navigering -->
+        <p>
+            Med fire ulike perspektiver og utdanningsbakgrunner, i tillegg til et sterkt samarbeid, vant vi Hackathon 2024: Highsoft x Gi Gaven Videre. Dette ga oss muligheten til å bruke kreativiteten vår til å utvikle nye løsninger for å forbedre brukeropplevelsen hos "Gi Gaven Videre".
+        </p>
+        <img src="/figma/Vinnere.jpg" alt="Vinnere" />
+    </main>
+    <Footer />
+</body>
+</html>
